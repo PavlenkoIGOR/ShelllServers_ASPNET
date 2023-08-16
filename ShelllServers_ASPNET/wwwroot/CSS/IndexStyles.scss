@@ -1,0 +1,54 @@
+﻿*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color:darkblue;
+    color:bisque;
+}
+.main-header{
+    position: relative;
+}
+
+@font-face{
+
+}
+.layers {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    text-align:center;
+    overflow: hidden;
+}
+.layer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+}
+
+.layer__base{
+    transform: translate3d(0, calc(var(--scrollTop)/1.0), 0);
+}
+
+.layers__middle {
+    transform: translate3d(0, calc(var(--scrollTop)/-2.5), 0);
+}
+
+.layers__front {
+    transform: translate3d(0, calc(var(--scrollTop)/-1.7), 0);
+}
+.main-article {
+    min-height: 100vh;
+
+}
