@@ -13,6 +13,8 @@ body {
     background-color:darkblue;
     color:bisque;
 }
+
+
 .main-header{
     position: relative;
 }
@@ -42,7 +44,7 @@ body {
 }
 
 .layers__middle {
-    transform: translate3d(0, calc(var(--scrollTop)/-2.5), 0);
+    transform: translate3d(0, calc(var(--scrollTop)/-3.0), 0);
 }
 
 .layers__front {
