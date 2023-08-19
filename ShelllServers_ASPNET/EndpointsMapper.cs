@@ -14,11 +14,12 @@ namespace ShelllServers_ASPNET
         //подключение домашней страницы
         public static void MapHTML(this IEndpointRouteBuilder routeBuilder)
         {
+            string advWindow = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "Views", "Shared", "Adv_Window.html"));
             routeBuilder.MapGet("/", async context =>
             {
                 var viewPath = Path.Combine(Directory.GetCurrentDirectory(), "Views", "Index.html");
-                var html = new StringBuilder(await File.ReadAllTextAsync(viewPath));
-                //.Replace("<!--SIDEBAR-->", sidebarHTML)
+                var html = new StringBuilder(await File.ReadAllTextAsync(viewPath))
+                .Replace("<!--Adv_Window-->", advWindow);
                 //.Replace("<!--FOOTER-->", footerHTML);
                 await context.Response.WriteAsync(html.ToString());
             });
@@ -34,8 +35,6 @@ namespace ShelllServers_ASPNET
                 {
                     var viewCSS = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "CSS", $"{styleFile}");
                     var css = new StringBuilder(await File.ReadAllTextAsync(viewCSS));
-                    //.Replace("<!--SIDEBAR-->", sidebarHTML)
-                    //.Replace("<!--FOOTER-->", footerHTML);
                     await context.Response.WriteAsync(css.ToString());
                 });
             }
@@ -51,8 +50,6 @@ namespace ShelllServers_ASPNET
                 {
                     var viewJS = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "JS", $"{scriptFile}");
                     var js = new StringBuilder(await File.ReadAllTextAsync(viewJS));
-                    //.Replace("<!--SIDEBAR-->", sidebarHTML)
-                    //.Replace("<!--FOOTER-->", footerHTML);
                     await context.Response.WriteAsync(js.ToString());
                 });
             }
@@ -68,8 +65,6 @@ namespace ShelllServers_ASPNET
                 {
                     var viewIMG = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "IMG", $"{picFile}");
                     var img = await File.ReadAllBytesAsync(viewIMG);
-                    //.Replace("<!--SIDEBAR-->", sidebarHTML)
-                    //.Replace("<!--FOOTER-->", footerHTML);
                     await context.Response.Body.WriteAsync(img);
                 });
             }

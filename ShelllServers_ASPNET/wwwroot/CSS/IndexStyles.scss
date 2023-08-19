@@ -69,7 +69,7 @@ body {
 
 .layer-3 {
     transform: translateZ(120px);
-    z-index: 12;
+    z-index: 2;
     top: 10%;
 }
 
@@ -167,3 +167,17 @@ li:hover {
     //background-color: darkblue;
 }
 /*end of HEADER*/
+
+/*Adv_Window*/
+.adv_Window {
+    position: absolute;
+    background-color: #100642;
+    border-radius: 16px;
+    width: 60%; /*calc(var(--index) - 20px);*/
+    height: 60%; /*calc(var(--index) - 100px);*/
+    z-index: 900;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+/*конец Adv_Window*/
