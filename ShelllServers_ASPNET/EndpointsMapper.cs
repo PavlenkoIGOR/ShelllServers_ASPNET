@@ -61,7 +61,7 @@ namespace ShelllServers_ASPNET
         //подключение всех изображений
         public static void MapIMG(this IEndpointRouteBuilder routeBuilder)
         {
-            string[] imgs = { "img3bg.png", "layer-middle.png", "img31.png", "layer-front.png", "layer-base.png" }; //имеет значение названия  файлов. ППЦ...
+            string[] imgs = { "logo.png", "layer-1.jpg", "layer-2.png", "layer-5.png" }; //имеет значение названия  файлов. ППЦ...
             foreach (var picFile in imgs)
             {
                 routeBuilder.MapGet($"wwwroot/IMG/{picFile}", async context =>
