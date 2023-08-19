@@ -1,49 +1,48 @@
-﻿*{
-    margin:0;
-    padding:0;
+﻿* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-:root{
 
+:root {
+    --index: calc(1vw + 1vh); /*коэффициент для того чтобы размер элементов менялся динамически от размеров экранов*/
 }
 
-h1 {
-    text-align: center;
-    font-size: 160px;
-}
+
 
 body {
     margin: 0;
     padding: 0;
     background-color: midnightblue;
     color: bisque;
-
     overflow: hidden;
     scrollbar-width: none; //для mozilla
 }
 
-.logo{
+.logo {
+    padding: 0;
     position: absolute;
-    width: 70%;
-    height: 20%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    width: calc(var(--index)*24);
+    height: calc(var(--index)*24);
+    background-size: 100%;
+    left: 20%;
+    top: 45%;
+    /*transform: translate(-50%, -50%);*/
     background-repeat: no-repeat;
-    z-index: 2;
-    text-align: center;
+    z-index: 1;
 }
 
-.layers{
-    /*perspective: 5000px; //чем меньше параметр тем больше перспектива*/
+.layers {
+    /*perspective: 5000px; /*чем меньше параметр тем больше перспектива*/
     overflow: hidden;
-    scrollbar-width:none;
+    scrollbar-width: none;
 }
 
 .layers__container {
     height: 100vh;
     transform-style: preserve-3d;
     transform: rotateX(var(--move-y)) rotateY(var(--move-x));
+    will-change: transform; /*указываем, при наличии transform, чтобы выделялись ресурсы для анимации*/
 }
 
 .layers__item {
@@ -51,11 +50,13 @@ body {
     inset: -5vw; /*вместо top, left, right, bottom*/
     background-size: cover;
     background-position: center;
-    
+    display: flex;
+    /*align-items: center;*/
+    justify-content: center;
 }
 
 /*фон*/
-.layer-1 { 
+.layer-1 {
     transform: translateZ(-200px) scale(1.2);
     background-repeat: no-repeat;
     z-index: 0;
@@ -69,7 +70,7 @@ body {
 .layer-3 {
     transform: translateZ(120px);
     z-index: 12;
-    
+    top: 10%;
 }
 
 .layer-4 {
@@ -82,6 +83,87 @@ body {
     z-index: 4;
 }
 
-.hero-content{
+.hero-content {
     text-align: center;
+    font-size: calc(var(--index)*1.9);
+    text-transform: uppercase;
+    letter-spacing: calc(var(--index) * -0.15);
+    font-family: 'vardana', Helvetica, sans-serif;
+    line-height: 1.35em;
 }
+
+.hero-content span {
+    display: block;
+}
+
+.button-start {
+    border: 5px bisque solid;
+    border-radius: 1em;
+    background-color: #f000;
+    padding: 20px;
+    color: bisque;
+    font-size: large;
+    font-weight: 600;
+    text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+}
+
+.button-start:hover {
+    box-shadow: 0 0 10px 15px bisque;
+    color: white;
+    background-color: darkblue;
+}
+
+/*т.к. слои 5, 4 мешают(из-за индексов, просто замена индексов не поможет)
+    взамодействовать с 3 слоем, на котором кнопка, то надо следующее:*/
+.layer-5, .layer-4 {
+    pointer-events: none;
+}
+
+/*HEADER*/
+header {
+    position: absolute;
+    z-index: 500;
+    border: none;
+    border-bottom: 2px solid bisque;
+    width: 100%;
+    height: 50px;
+}
+
+.headerH1 {
+    text-align: center;
+    font-size: calc(var(--index)*1.9);
+    text-transform: uppercase;
+    letter-spacing: calc(var(--index) * -0.15);
+    font-family: 'vardana', Helvetica, sans-serif;
+}
+.headerDiv {
+    position: absolute;
+    right: 50px;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    display: inline-flex;
+}
+
+.headerDiv ul {
+    display: inline-flex;
+}
+
+li {
+    display: inline-flex;
+    list-style-type: none;
+    width: 100%;
+    padding: 5px;
+    margin: auto;
+    height: 100%;
+    text-align:center;
+}
+li:hover {
+    border: none;
+    border-bottom: 5px groove bisque;
+    color: white;
+    //background-color: darkblue;
+}
+/*end of HEADER*/
