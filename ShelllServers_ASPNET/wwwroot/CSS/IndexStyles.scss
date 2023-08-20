@@ -68,7 +68,7 @@ body {
 }
 
 .layer-3 {
-    transform: translateZ(120px);
+    transform: translateZ(10px);
     z-index: 2;
     top: 10%;
 }
@@ -117,7 +117,7 @@ body {
 
 /*т.к. слои 5, 4 мешают(из-за индексов, просто замена индексов не поможет)
     взамодействовать с 3 слоем, на котором кнопка, то надо следующее:*/
-.layer-5, .layer-4, .adv_Window, .divFor, .inputsDiv, .beforeInputsDiv {
+.layer-5, .layer-4/*, .adv_Window, .divFor, .inputsDiv, .beforeInputsDiv*/ {
     pointer-events: none;
 }
 
@@ -169,21 +169,22 @@ li:hover {
 /*end of HEADER*/
 
 /*Adv_Window*/
-.adv_Window {
+.layers__advWindow {
     position: absolute;
     background-color: #100642;
     border-radius: 16px;
     width: 60%; /*calc(var(--index) - 20px);*/
     height: 60%; /*calc(var(--index) - 100px);*/
     z-index: 900;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
+    //transform: translate(-50%, -50%);
+    top: 25%;
+    left: 20%;
     text-align: -moz-center;
     display: flex;
     align-items: center;
     justify-content: center;
     vertical-align: middle;
+    transform: translateZ(20px);
 }
 
 .divFor {
