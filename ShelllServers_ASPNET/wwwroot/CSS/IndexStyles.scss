@@ -117,7 +117,7 @@ body {
 
 /*т.к. слои 5, 4 мешают(из-за индексов, просто замена индексов не поможет)
     взамодействовать с 3 слоем, на котором кнопка, то надо следующее:*/
-.layer-5, .layer-4 {
+.layer-5, .layer-4, .adv_Window, .divFor, .inputsDiv, .beforeInputsDiv {
     pointer-events: none;
 }
 
@@ -179,5 +179,27 @@ li:hover {
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
+    text-align: -moz-center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.divFor {
+    width: 90%;
+    border: 2px solid white;
+    height: 90%;
+}
+
+.inputsDiv {
+    position: relative;
+    display: inline-grid;
+    width: 80%;
+    height: 80%;
+}
+
+.inputMain{
+    height: 35px;
 }
 /*конец Adv_Window*/
