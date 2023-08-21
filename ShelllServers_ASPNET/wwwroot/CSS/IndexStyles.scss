@@ -171,7 +171,7 @@ li:hover {
 /*Adv_Window*/
 .layers__advWindow {
     position: absolute;
-    background-color: #100642;
+    background-color: rgba(19, 34, 97, 0.8);/*#100642;*/
     border-radius: 16px;
     width: 60%; /*calc(var(--index) - 20px);*/
     height: 60%; /*calc(var(--index) - 100px);*/
@@ -204,3 +204,53 @@ li:hover {
     height: 35px;
 }
 /*конец Adv_Window*/
+
+.layers__chatBotWindow {
+    position: absolute;
+    background-color: rgba(19, 34, 97, 0.8); /*#100642;*/
+   
+    border-radius: 16px;
+    width: 60%; /*calc(var(--index) - 20px);*/
+    height: 60%; /*calc(var(--index) - 100px);*/
+    z-index: 900;
+    //transform: translate(-50%, -50%);
+    top: 25%;
+    left: 20%;
+    text-align: -moz-center;
+    display: block;
+    //align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    transform: translateZ(20px);
+}
+
+.beforeOutputsDiv{
+    position: relative;
+    display:flex;
+    height: 40px;
+    width: 100%;
+    background-color: bisque;
+}
+
+.outputsDiv {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    color: bisque;
+}
+
+.outputMain {
+    position: relative;
+    display: flex;
+    height: auto;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+}

@@ -15,12 +15,13 @@ namespace ShelllServers_ASPNET
         public static void MapHTML(this IEndpointRouteBuilder routeBuilder)
         {
             string advWindow = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "Views", "Shared", "Adv_Window.html"));
+            string chatBotWindow = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "Views", "Shared", "ChatBot.html"));
             routeBuilder.MapGet("/", async context =>
             {
                 var viewPath = Path.Combine(Directory.GetCurrentDirectory(), "Views", "Index.html");
                 var html = new StringBuilder(await File.ReadAllTextAsync(viewPath))
-                .Replace("<!--Adv_Window-->", advWindow);
-                //.Replace("<!--FOOTER-->", footerHTML);
+                .Replace("<!--Adv_Window-->", advWindow)
+                .Replace("<!--ChatBot_Window-->", chatBotWindow);
                 await context.Response.WriteAsync(html.ToString());
             });
         }
