@@ -7,17 +7,16 @@ document.addEventListener('mousemove', event => {
     })
 })
 
+
 /*показать окно для рекламы*/
 let advRef = document.getElementsByClassName('nav-link');
 for( var ref of advRef){
-ref.addEventListener('click', Show);
-	function Show(){
-		for(var lnk of advRef){
-			if(lnk.innerHTML == "Реклама сервера"){
-				let advLink = document.getElementsByClassName('layers__advWindow')[0];
-				advLink.style.display = "flex";
-			}
-		}
-		console.log();
-	};
+	if(ref.innerHTML == "Реклама сервера"){
+		ref.addEventListener('click', Show);
+	}
+	else{}
+}
+function Show(){
+	let advLink = document.getElementsByClassName('layers__advWindow')[0];
+	advLink.style.display = "flex";	
 }
