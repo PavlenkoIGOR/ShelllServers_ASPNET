@@ -42,7 +42,7 @@ body {
 .layers__container {
     height: 100vh;
     transform-style: preserve-3d;
-    transform: rotateX(var(--move-y)) rotateY(var(--move-x));
+    transform: rotateX(var(--move-y)) rotateY(calc(var(--move-x)*-1));
     will-change: transform; /*указываем, при наличии transform, чтобы выделялись ресурсы для анимации*/
 }
 
@@ -231,7 +231,7 @@ li:hover {
     display:flex;
     height: 40px;
     width: 100%;
-    background-color: bisque;
+    background-color: black;
 }
 
 .outputsDiv {
@@ -246,18 +246,20 @@ li:hover {
 }
 
 .outputMain {
-	position: relative;
+	position: absolute;
     display: flex;
     height: 100%;
     width: 100%;
     background-color: rgb(31, 112, 184);
 }
 p{
-	font-family: 'vardana', fantasy, auto;
+    font-family: 'vardana', fantasy, auto;
     font-size: 35px;
     text-transform: uppercase;
     padding: 0;
     margin: 0;
     vertical-align: middle;
+    position: absolute;
+    top: 3px;
 }
 /*конец chatBotWindow*/
