@@ -1,13 +1,14 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShelllServers_ASPNET</title>
-    <link href="../wwwroot/CSS/IndexStyles.scss" rel="stylesheet" type="text/css">
+    <link href="CSS/IndexStyles.css" rel="stylesheet" type="text/css">
+	
 	<!-- Bootstrap core CSS -->
-	<link href="../wwwroot/CSS/bootstrap.min.css" rel="stylesheet">
+	<link href="CSS/bootstrap.min.css" rel="stylesheet">
     
 </head>
 <body>
@@ -19,19 +20,22 @@
                 <li>About us</li>
                 <li>Contact us</li>
             </ul>
-    </div-->
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <a class="navbar-brand" href="#">Fixed navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
+        </div-->
+		    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="#">ZMB</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="#">Contact Us</a>
       </li>
       <li class="nav-item">
         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
@@ -46,13 +50,13 @@
     </header>
 
 
-    <!--div class="logo" style="background-image: url(../wwwroot/IMG/logo.png)"></div-->
+    <!--div class="logo" style="background-image: url(IMG/logo.png)"></div-->
 
     <div class="layers">
 
         <div class="layers__container">
-            <div class="layers__item layer-1" style="background-image: url(../wwwroot/IMG/layer-1.jpg);"></div>
-            <div class="layers__item layer-2" style="background-image: url(../wwwroot/IMG/layer-2.png);"></div>
+            <div class="layers__item layer-1" style="background-image: url(IMG/layer-1.jpg);"></div>
+            <div class="layers__item layer-2" style="background-image: url(IMG/layer-2.png);"></div>
             <div class="layers__item layer-3">
                 <div class="hero-content">
                     <h1>ZMB <span>Эффективная реклама всех серверов</span></h1>
@@ -60,12 +64,48 @@
                     <button class="button-start">Начать</button>
                 </div>
             </div>
-            <!--1Adv_Window--> <!--пока не отображается так как надо-->
-            <!--ChatBot_Window--> <!--пока не отображается так как надо-->
+			
+            ﻿<div class="layers__advWindow">
+				<div class="divFor">
+					<div class="innerDivADV">
+						<div class="beforeInputsDiv">
+						<h2>Реклама на ZMB Studio</h2>
+						<p>В этом магазине можно купить и настроить рекламу в розыгрыше на дискорд-сервере MBStudio.
+						<br>Укажите необходимое количество участников, введите бессрочную ссылку на Ваш сервер и оплатитерекламу.
+						<span style = "font-weight: bold;">Обратите внимание!</span> Чтобы реклама работала правильно - Вам необходимо добавить на сервер нашего бота. После завершения срока рекламы, бот автоматически покинет сервер.</p>
+						</div>
+						<div class="inputsDiv">
+							<p><span>*</span>Ссылка на сервер:</br>
+								<input class="inputMain" type="type" name="name" value="" placeholder="Ссылка на сервер" />
+							</p>
+							<p><span>*</span>ID сервера:</br>
+							<input class="inputMain" type="type" name="name" value="" placeholder="ID сервера" />
+							</p>
+							<p><span>*</span>Необходимое количество участников:</br>
+							<input class="inputMain" type="type" name="name" value="" placeholder="Необходимое количество участников" />
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			﻿<!--div class="layers__chatBotWindow">
+				<div class="beforeOutputsDiv">
+					<p id = "p_chatBotWindow" style="z-index: 50; color: rgb(31, 112, 184);">DISCORD</p>
+				</div>
+				<div class="outputsDiv">
+					<output class="outputMain" type="type" name="name" value="" placeholder="Здесь будет чат">
+					<p>Новый комментарий</p>
+					</output>
+				</div>
+			</div-->
+			
+			
+
             <div class="layers__item layer-4">
                 <canvas class="rain"></canvas>
             </div>
-            <div class="layers__item layer-5" style="background-image: url(../wwwroot/IMG/layer-5.png);"></div>
+            <div class="layers__item layer-5" style="background-image: url(IMG/layer-5.png);"></div>
         </div>
 
     </div>
@@ -73,10 +113,10 @@
 
 
 
-    <script defer src="../wwwroot/JS/Index.js" rel="script" type="text/javascript"></script>
-    <!--Bootstrap-->
+    <script defer src="JS/Index.js" rel="script" type="text/javascript"></script>
+	<!--Bootstrap-->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <!--script>window.jQuery || document.write('<script src="JS/jquery-3.7.0.min.js"><\/script>')</script-->
-	<script src="../wwwroot/JS/bootstrap.bundle.min.js"></script>
+	<script src="JS/bootstrap.bundle.min.js"></script>
 </body>
 </html>
