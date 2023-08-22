@@ -20,6 +20,6 @@ for( var ref of advRef){
 	else{}
 }
 function Show(){
-	let advLink = document.getElementsByClassName('advWindow')[0];
+	let advLink = document.getElementsByClassName('layers__advWindow')[0];
 	advLink.style.display = "flex";	
 }

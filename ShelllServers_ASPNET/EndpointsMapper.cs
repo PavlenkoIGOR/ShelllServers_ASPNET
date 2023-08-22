@@ -15,7 +15,7 @@ namespace ShelllServers_ASPNET
         public static void MapHTML(this IEndpointRouteBuilder routeBuilder)
         {
             string advWindow = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "Views", "Shared", "Adv_Window.html"));
-            string chatBotWindow = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "Views", "Shared", "ChatBot.html"));
+            string chatBotWindow = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "Views", "Shared", "ChatBot_Window.html"));
             routeBuilder.MapGet("/", async context =>
             {
                 var viewPath = Path.Combine(Directory.GetCurrentDirectory(), "Views", "Index.html");
@@ -29,7 +29,7 @@ namespace ShelllServers_ASPNET
         //подключение всех стилей
         public static void MapCSS (this IEndpointRouteBuilder routeBuilder)
         {
-            string[] styles = { "IndexStyles.scss" };
+            string[] styles = { "IndexStyles.css", "bootstrap.min.css" };
             foreach (var styleFile in styles)
             {
                 routeBuilder.MapGet($"wwwroot/CSS/{styleFile}", async context =>
@@ -44,7 +44,7 @@ namespace ShelllServers_ASPNET
         //подключение всех JS-файлов
         public static void MapJS(this IEndpointRouteBuilder routeBuilder)
         {
-            string[] jscripts = { "Index.js" };
+            string[] jscripts = { "Index.js", "jquery-3.7.0.min.js", "bootstrap.bundle.min.js" };
             foreach (var scriptFile in jscripts)
             {
                 routeBuilder.MapGet($"wwwroot/JS/{scriptFile}", async context =>
