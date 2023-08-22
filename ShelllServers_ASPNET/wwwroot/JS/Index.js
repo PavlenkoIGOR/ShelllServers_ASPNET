@@ -14,9 +14,12 @@ for( var ref of advRef){
 	if(ref.innerHTML == "Реклама сервера"){
 		ref.addEventListener('click', Show);
 	}
+	if(ref.innerHTML == "Discord"){
+		ref.addEventListener('click', Show);
+	}
 	else{}
 }
 function Show(){
-	let advLink = document.getElementsByClassName('layers__advWindow')[0];
+	let advLink = document.getElementsByClassName('advWindow')[0];
 	advLink.style.display = "flex";	
 }
