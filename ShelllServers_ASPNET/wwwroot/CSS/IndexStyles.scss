@@ -177,11 +177,11 @@ li:hover {
     width: 60%; /*calc(var(--index) - 20px);*/
     height: 60%; /*calc(var(--index) - 100px);*/
     z-index: 900;
-    //transform: translate(-50%, -50%);
+    /*transform: translate(-50%, -50%);*/
     top: 25%;
     left: 20%;
     text-align: -moz-center;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     vertical-align: middle;
