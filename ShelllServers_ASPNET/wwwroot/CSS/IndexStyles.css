@@ -109,6 +109,7 @@ body {
     text-transform: uppercase;
     outline: none;
     cursor: pointer;
+width: 170px;
 }
 
 .button-start:hover {
