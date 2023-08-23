@@ -124,50 +124,7 @@ body {
 }
 
 /*HEADER*/
-/*header {
-    position: absolute;
-    z-index: 500;
-    border: none;
-    border-bottom: 2px solid bisque;
-    width: 100%;
-    height: 50px;
-}
 
-.headerH1 {
-    text-align: center;
-    font-size: calc(var(--index)*1.9);
-    text-transform: uppercase;
-    letter-spacing: calc(var(--index) * -0.15);
-    font-family: 'vardana', Helvetica, sans-serif;
-}
-.headerDiv {
-    position: absolute;
-    right: 50px;
-    height: 100%;
-    text-align: center;
-    justify-content: center;
-    display: inline-flex;
-}
-
-.headerDiv ul {
-    display: inline-flex;
-}
-
-li {
-    display: inline-flex;
-    list-style-type: none;
-    width: 100%;
-    padding: 5px;
-    margin: auto;
-    height: 100%;
-    text-align:center;
-}
-li:hover {
-    border: none;
-    border-bottom: 5px groove bisque;
-    color: white;
-    //background-color: darkblue;
-}
 /*end of HEADER*/
 
 /*Adv_Window*/
@@ -187,6 +144,7 @@ li:hover {
     justify-content: center;
     vertical-align: middle;
     transform: translateZ(20px);
+	
 }
 
 .divFor {
@@ -214,6 +172,7 @@ li:hover {
 .innerDivADV{
 	transition: all 0.5s ease-in-out;
 }
+
 #divForSentFormButton{
 	position: relative;
 }
@@ -279,3 +238,23 @@ li:hover {
     top: 3px;
 }
 /*конец chatBotWindow*/
+
+/*начало mainWindow*/
+#layers__handlerWindow{
+	position: absolute;
+    background-color: rgba(31, 112, 184, 0.9);/*#100642;*/
+    border-radius: 16px;
+    width: 60%; /*calc(var(--index) - 20px);*/
+    height: 60%; /*calc(var(--index) - 100px);*/
+    z-index: 900;
+    /*transform: translate(-50%, -50%);*/
+    top: 25%;
+    left: 20%;
+    text-align: -moz-center;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    transform: translateZ(23px);
+}
+/*конец mainWindow*/
