@@ -228,7 +228,7 @@ width: 170px;
     width: 100%;
     background-color: rgb(31, 112, 184);
 }
-#p_chatBotWindow{
+#p_chatBotWindow {
     font-family: 'vardana', fantasy, auto;
     font-size: 35px;
     text-transform: uppercase;
@@ -237,10 +237,11 @@ width: 170px;
     vertical-align: middle;
     position: absolute;
     top: 3px;
+    font-weight: 600;
 }
 /*конец chatBotWindow*/
 
-/*начало mainWindow*/
+/*начало handlerWindow*/
 #layers__handlerWindow{
 	position: absolute;
     background-color: rgba(31, 112, 184, 0.9);/*#100642;*/
@@ -258,4 +259,64 @@ width: 170px;
     vertical-align: middle;
     transform: translateZ(23px);
 }
-/*конец mainWindow*/
+#divH1 {
+    position: relative;
+    width: 100%;
+    max-height: fit-content;
+    background-color: black;
+    min-height: 40px;
+}
+#divH1 h1 {
+    font-family: 'vardana', fantasy, auto;
+    font-weight: 600;
+    font-size: 35px;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+    position: absolute;
+    top: 7px;
+    color: rgb(31, 112, 184);
+}
+#divUnderH1 {
+
+    width: calc(100%-40px);
+    position: relative;
+    display: contents;
+}
+#divLeft {
+    width: 50%;
+    height: calc(100% - 40px);
+    /*background-color: red;*/
+    display: inline-flex;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    justify-content: center;
+    vertical-align: middle;
+}
+#divRight {
+    width: 50%;
+    height: calc(100% - 40px);
+    /*background-color: saddlebrown;*/
+    display: grid;
+    position: absolute;
+    left: 50%;
+}
+#photoDivPlace{
+    width: 120px;
+    height: 120px;
+    top: 40px;
+    border: 2px solid bisque;
+    position: relative;
+}
+#divRight output {
+    position: relative;
+    background-color: none;
+    border: none;
+    border-bottom: 1px solid bisque;
+    height: 40px;
+    display: grid;
+    width: 70%;
+}
+/*конец handlerWindow*/

@@ -52,7 +52,7 @@ function ShowAdwWindow(){
 function ShowHandlerWindow(){
 	HideModals();
 	let handlerWin = document.getElementById('layers__handlerWindow');
-	handlerWin.style.display = "flex";
+	handlerWin.style.display = "block";
 }
 
 let position=0; //переменная для скролла

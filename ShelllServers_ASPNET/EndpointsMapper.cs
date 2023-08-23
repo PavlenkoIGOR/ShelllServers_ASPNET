@@ -16,12 +16,14 @@ namespace ShelllServers_ASPNET
         {
             string advWindow = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "Views", "Shared", "Adv_Window.html"));
             string chatBotWindow = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "Views", "Shared", "ChatBot_Window.html"));
+            string holderWindow = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "Views", "Shared", "Holder_window.html"));
             routeBuilder.MapGet("/", async context =>
             {
                 var viewPath = Path.Combine(Directory.GetCurrentDirectory(), "Views", "Index.html");
                 var html = new StringBuilder(await File.ReadAllTextAsync(viewPath))
                 .Replace("<!--Adv_Window-->", advWindow)
-                .Replace("<!--ChatBot_Window-->", chatBotWindow);
+                .Replace("<!--ChatBot_Window-->", chatBotWindow)
+                .Replace("<!--Holder_Window-->", holderWindow);
                 await context.Response.WriteAsync(html.ToString());
             });
         }
