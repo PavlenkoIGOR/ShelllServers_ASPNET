@@ -54,11 +54,11 @@ function Scroll(){
 		let innerDivADV = document.getElementsByClassName('innerDivADV')[0];
 		if(e.wheelDelta >= 0)
 		{
-			position +=10;
+			position +=40;
 			innerDivADV.style.transform = `translateY(${position}px)`;
 		}
 		else{
-		position -=10;
+		position -=40;
 			innerDivADV.style.transform = `translateY(${position}px)`;
 		}
 	})
