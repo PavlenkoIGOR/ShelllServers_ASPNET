@@ -7,7 +7,7 @@ document.addEventListener('mousemove', event => {
     })
 })
 
-
+let bttnSentForm = document.getElementById('SentFormButton'); //кнопка отправления рекламы
 let modalWindows = document.getElementsByClassName('modalWindow');
 
 /*показать окно для рекламы*/
@@ -55,7 +55,6 @@ function ShowHandlerWindow(){
 	handlerWin.style.display = "flex";
 }
 
-
 let position=0; //переменная для скролла
 /*функция скролла*/
 function Scroll(){
@@ -74,7 +73,19 @@ function Scroll(){
 	})
 }
 
+
+bttnSentForm.addEventListener('click', InputNull);
 /*функция проверки на null*/
 function InputNull(){
-	let inp = document.getElementsByClassName
+	s = ' ';
+	s = s.replace(/^\s+|\s+$/g, '');
+	let inp = document.getElementsByClassName('inputMain');
+	for( var elem of inp ){
+		if(elem.value == s){
+			elem.style.backgroundColor = "red";
+			elem.setAttribute('placeholder', "Поле обязательно для заполнения!");
+			alert("!!!");
+		}
+		
+	}
 }
