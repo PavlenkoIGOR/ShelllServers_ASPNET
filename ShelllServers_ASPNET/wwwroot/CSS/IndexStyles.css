@@ -71,7 +71,7 @@ body {
 .layer-3 {
     transform: translateZ(10px);
     z-index: 2;
-    top: 10%;
+    top: 30%;
 }
 
 .layer-4 {
