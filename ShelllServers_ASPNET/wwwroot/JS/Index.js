@@ -12,13 +12,16 @@ let modalWindows = document.getElementsByClassName('modalWindow');
 
 /*показать окно для рекламы*/
 let advRef = document.getElementsByClassName('nav-link');
-
+let advRef2 = document.getElementsByClassName('nav-link active');
 for( var ref of advRef){
 	if(ref.innerHTML == "Реклама сервера"){
 		ref.addEventListener('click', ShowAdwWindow);
 	}
 	if(ref.innerHTML == "DISCORD"){
 		ref.addEventListener('click', ShowDiscord);
+	}
+	if(ref.innerHTML == "HOME"){
+		ref.addEventListener('click', ShowHandlerWindow);
 	}
 	else{}
 }
@@ -37,7 +40,6 @@ function ShowDiscord(){
 	discordWin.style.display = "block";
 }
 
-let position=0;
 /*функция показа модального для рекламы*/
 function ShowAdwWindow(){
 	HideModals();
@@ -46,8 +48,16 @@ function ShowAdwWindow(){
 	Scroll();
 }
 
+/*функция показа модального для владельца сервера*/
+function ShowHandlerWindow(){
+	HideModals();
+	let handlerWin = document.getElementById('layers__handlerWindow');
+	handlerWin.style.display = "flex";
+}
 
 
+let position=0; //переменная для скролла
+/*функция скролла*/
 function Scroll(){
 	let elem = document.getElementsByClassName('divFor')[0];
 	elem.addEventListener('wheel', function(e) {
@@ -62,4 +72,9 @@ function Scroll(){
 			innerDivADV.style.transform = `translateY(${position}px)`;
 		}
 	})
+}
+
+/*функция проверки на null*/
+function InputNull(){
+	let inp = document.getElementsByClassName
 }
